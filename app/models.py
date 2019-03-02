@@ -1,7 +1,6 @@
 from django.db import models
 
 class Semester(models.Model):
-
 	CHOICES = (
 			(1, 'First'),
 			(2, 'Second'),
@@ -17,3 +16,9 @@ class Semester(models.Model):
 
 	def __str__(self):
 		return str(self.semester)
+
+class Department(models.Model):
+	department = models.CharField(max_length=100)
+
+	def __str__(self):
+		return self.department
